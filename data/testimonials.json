@@ -1,0 +1,58 @@
+
+[
+  {
+    "id": "t-1",
+    "name": "Sophia Reynolds",
+    "role": "Interior Design Enthusiast",
+    "location": "San Francisco, CA",
+    "avatar": "SR",
+    "rating": 5,
+    "category": "Home Interior",
+    "quote": "PocketSmart AI took the overwhelm out of furnishing our new 3-bedroom apartment. By inputting our budget and room requirements, it gave us a harmonious modern Scandinavian aesthetic that kept us precisely within our $4,500 limit!",
+    "date": "2026-08-14"
+  },
+  {
+    "id": "t-2",
+    "name": "Marcus & Elena Vance",
+    "role": "Newlyweds & Party Hosts",
+    "location": "Austin, TX",
+    "avatar": "MV",
+    "rating": 5,
+    "category": "Party & Events",
+    "quote": "Planning our 60-guest engagement party seemed impossible until we used the Party Budget Planner. The breakdown for catering, venue, and a 10% contingency buffer prevented unexpected hidden expenses.",
+    "date": "2026-07-29"
+  },
+  {
+    "id": "t-3",
+    "name": "Devon Patel",
+    "role": "Tech Founder & Fine Watch Collector",
+    "location": "Seattle, WA",
+    "avatar": "DP",
+    "rating": 5,
+    "category": "Jewelry & Luxury",
+    "quote": "The jewelry curation algorithm is surprisingly astute. It paired my anniversary budget with timeless 18K yellow gold pieces and provided genuine styling guidance that made selecting a gift effortless.",
+    "date": "2026-09-02"
+  },
+  {
+    "id": "t-4",
+    "name": "Clara Lindqvist",
+    "role": "Architectural Consultant",
+    "location": "Stockholm, Sweden",
+    "avatar": "CL",
+    "rating": 5,
+    "category": "Home Interior",
+    "quote": "The lighting and furniture suggestions strike the perfect balance between design sophistication and cost consciousness. Being able to bookmark items to my wishlist and export plans is a huge plus.",
+    "date": "2026-08-20"
+  },
+  {
+    "id": "t-5",
+    "name": "Julian Thorne",
+    "role": "Corporate Event Director",
+    "location": "Chicago, IL",
+    "avatar": "JT",
+    "rating": 5,
+    "category": "Party & Events",
+    "quote": "Having a clear per-guest catering metric combined with entertainment and photography tiers allowed us to present a crisp, transparent budget to leadership in under ten minutes.",
+    "date": "2026-06-18"
+  }
+]

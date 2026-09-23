@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine Jewelry Recommendations – PocketSmart AI</title>
+  <meta name="description" content="Explore fine diamond rings, 18K solid gold chains, and luxury timepieces matched to your budget.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>✨ <strong>Fine Jewelry Engine:</strong> Curated pieces with transparent pricing and styling recommendations.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">LUXE</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link active">Jewelry Planner</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+            <a href="jewelry-planner.html" style="font-size: 0.85rem; font-weight: 600;">&larr; Adjust Jewelry Preferences</a>
+            <span style="color: var(--muted-text-color);">•</span>
+            <span class="section-tag gold" style="margin: 0; padding: 0.15rem 0.5rem; font-size: 0.72rem;">Fine Jewelry</span>
+          </div>
+          <h1 id="planTitle" style="font-size: 2.2rem; margin-bottom: 0.25rem;">Curated Luxury Jewelry Collection</h1>
+          <p id="planSubtitle">Handcrafted diamond pavé, 18K solid gold, and Swiss chronographs within your budget.</p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="saved.html" class="btn btn-secondary btn-sm">Wishlist</a>
+          <button class="btn btn-gold btn-sm" onclick="window.print()">Export Collection</button>
+        </div>
+      </div>
+
+      <!-- Real-time Budget Summary Gauge -->
+      <div id="budgetSummaryCard" class="budget-summary-card"></div>
+
+      <!-- General Styling Tips Guidance Banner -->
+      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.08) 100%); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-lg); padding: 1.25rem 1.75rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1.25rem; box-shadow: var(--shadow-sm);">
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: #1a162b; border: 1px solid rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; color: #fbbf24; flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        </div>
+        <div>
+          <h4 style="font-size: 1.05rem; color: #fbbf24; margin-bottom: 0.25rem;">Curator's Styling Guidance</h4>
+          <p style="font-size: 0.88rem; color: #fde68a; margin: 0; line-height: 1.5;">
+            Fine jewelry achieves its highest elegance when balanced. Pair high-carat diamond statement pieces with minimalist neckline attire, and mix yellow gold chains with warm earth tones. Styling tips are general aesthetic guidelines.
+          </p>
+        </div>
+      </div>
+
+      <!-- Search & Filters Toolbar -->
+      <div class="toolbar-container">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="recommendationSearch" placeholder="Search rings, 18K chains, pearls, watches..." />
+        </div>
+
+        <div class="filter-pills" id="categoryFilters"></div>
+
+        <div>
+          <select class="sort-select" id="sortSelect">
+            <option value="relevance">Sort: Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid-3" id="productsGrid"></div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Fine Jewelry Recommendation Engine.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/recommendations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Recommendations.init('jewelry');
+    });
+  </script>
+</body>
+</html>

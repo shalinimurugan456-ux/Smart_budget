@@ -1,0 +1,210 @@
+[
+  {
+    "id": "party-001",
+    "category": "Catering",
+    "name": "Artisanal Mediterranean Grazing & Hot Buffet",
+    "description": "Full-service gourmet spread including mezze platters, carved rotisserie meats, wild mushroom risotto, salad bar, and assorted dessert shooters.",
+    "pricePerGuest": 38,
+    "minGuests": 20,
+    "unit": "per guest",
+    "partyTypes": ["Birthday", "Anniversary", "Corporate", "Housewarming"],
+    "rating": 4.9,
+    "reviewsCount": 88,
+    "badge": "Top Choice",
+    "links": {
+      "booking": "https://example.com/catering-quote?tier=artisan-buffet"
+    }
+  },
+  {
+    "id": "party-002",
+    "category": "Catering",
+    "name": "Live Chef Taco & Street Food Fiesta Station",
+    "description": "Interactive live culinary station with handmade tortillas, slow-cooked carnitas, grilled portobello, fresh guacamole bar, and agua frescas.",
+    "pricePerGuest": 26,
+    "minGuests": 15,
+    "unit": "per guest",
+    "partyTypes": ["Birthday", "Housewarming", "Other"],
+    "rating": 4.8,
+    "reviewsCount": 115,
+    "badge": "Interactive",
+    "links": {
+      "booking": "https://example.com/catering-quote?tier=street-fiesta"
+    }
+  },
+  {
+    "id": "party-003",
+    "category": "Catering",
+    "name": "Fine Dining Plated 3-Course Formal Banquet",
+    "description": "White-glove plated dinner featuring heirloom tomato burrata, prime tenderloin or pan-seared sea bass, and Belgian chocolate ganache tart.",
+    "pricePerGuest": 65,
+    "minGuests": 25,
+    "unit": "per guest",
+    "partyTypes": ["Wedding", "Anniversary", "Corporate"],
+    "rating": 5.0,
+    "reviewsCount": 54,
+    "badge": "Ultra Luxury",
+    "links": {
+      "booking": "https://example.com/catering-quote?tier=plated-banquet"
+    }
+  },
+  {
+    "id": "party-004",
+    "category": "Venue",
+    "name": "Skyline Panorama Rooftop Terrace",
+    "description": "Private open-air rooftop venue with panoramic city views, weather-shield pergolas, designer lounge couches, and ambient mood uplighting.",
+    "price": 1200,
+    "capacity": "Up to 80 guests",
+    "venueType": "Outdoor",
+    "partyTypes": ["Birthday", "Anniversary", "Corporate"],
+    "rating": 4.9,
+    "reviewsCount": 72,
+    "badge": "City View",
+    "links": {
+      "booking": "https://example.com/venues/skyline-terrace"
+    }
+  },
+  {
+    "id": "party-005",
+    "category": "Venue",
+    "name": "Botanical Glasshouse & Garden Villa",
+    "description": "Natural daylight-filled architectural glass atrium surrounded by private manicured lush gardens, ideal for romantic and intimate celebrations.",
+    "price": 1650,
+    "capacity": "Up to 120 guests",
+    "venueType": "Indoor / Outdoor",
+    "partyTypes": ["Wedding", "Anniversary", "Birthday"],
+    "rating": 5.0,
+    "reviewsCount": 61,
+    "badge": "Enchanted Garden",
+    "links": {
+      "booking": "https://example.com/venues/botanical-glasshouse"
+    }
+  },
+  {
+    "id": "party-006",
+    "category": "Venue",
+    "name": "Industrial Chic Heritage Loft",
+    "description": "High ceilings, exposed red brickwork, polished concrete floors, and full AV projector setup suitable for contemporary parties.",
+    "price": 850,
+    "capacity": "Up to 60 guests",
+    "venueType": "Indoor",
+    "partyTypes": ["Birthday", "Corporate", "Housewarming"],
+    "rating": 4.7,
+    "reviewsCount": 93,
+    "badge": "Modern Vibe",
+    "links": {
+      "booking": "https://example.com/venues/heritage-loft"
+    }
+  },
+  {
+    "id": "party-007",
+    "category": "Decoration",
+    "name": "Luxe Organic Balloon Arch & Neon Backdrop",
+    "description": "Custom color palette double-stuffed matte latex balloon garland (16ft), custom acrylic signage with warm white LED neon lettering.",
+    "price": 380,
+    "partyTypes": ["Birthday", "Anniversary", "Housewarming", "Other"],
+    "rating": 4.8,
+    "reviewsCount": 130,
+    "badge": "Photo Worthy",
+    "links": {
+      "booking": "https://example.com/decor/balloon-backdrop"
+    }
+  },
+  {
+    "id": "party-008",
+    "category": "Decoration",
+    "name": "Romantic Floral Meadow & Fairy Canopy Suite",
+    "description": "Abundant fresh seasonal floral arrangements, cascading hanging fairy string lights, brass hurricane candleholders, and custom place cards.",
+    "price": 750,
+    "partyTypes": ["Wedding", "Anniversary"],
+    "rating": 4.9,
+    "reviewsCount": 47,
+    "badge": "Fresh Florals",
+    "links": {
+      "booking": "https://example.com/decor/fairy-meadow"
+    }
+  },
+  {
+    "id": "party-009",
+    "category": "Decoration",
+    "name": "Modern Minimalist Tabletop & Ambient Glow Package",
+    "description": "Linen table runners, ribbed taper candles, understated eucalyptus sprigs, and warm architectural uplighting pods.",
+    "price": 220,
+    "partyTypes": ["Corporate", "Housewarming", "Birthday"],
+    "rating": 4.6,
+    "reviewsCount": 68,
+    "badge": "Subtle Elegance",
+    "links": {
+      "booking": "https://example.com/decor/minimal-glow"
+    }
+  },
+  {
+    "id": "party-010",
+    "category": "Entertainment",
+    "name": "Live Acoustic Vocalist & Saxophone Duo (3 Hours)",
+    "description": "Sensational live musical accompaniment covering acoustic pop classics, soulful jazz, and celebratory upbeat tempo tracks.",
+    "price": 600,
+    "partyTypes": ["Wedding", "Anniversary", "Birthday", "Corporate"],
+    "rating": 4.9,
+    "reviewsCount": 55,
+    "badge": "Live Music",
+    "links": {
+      "booking": "https://example.com/talent/acoustic-sax"
+    }
+  },
+  {
+    "id": "party-011",
+    "category": "Entertainment",
+    "name": "Club DJ with Premium Sound & Intelligent Dance Lighting",
+    "description": "Pro DJ console, 2000W QSC sound reinforcement speakers, wireless mics for toasts, and sound-activated moving head lights.",
+    "price": 500,
+    "partyTypes": ["Birthday", "Corporate", "Wedding"],
+    "rating": 4.8,
+    "reviewsCount": 110,
+    "badge": "Crowd Favorite",
+    "links": {
+      "booking": "https://example.com/talent/club-dj"
+    }
+  },
+  {
+    "id": "party-012",
+    "category": "Photography",
+    "name": "Pro Candid Photography & 4K Highlight Reel",
+    "description": "5 hours of full event coverage by lead photographer, color-graded online gallery of 300+ images, and a 60-second social media reel.",
+    "price": 650,
+    "partyTypes": ["Wedding", "Anniversary", "Birthday", "Corporate"],
+    "rating": 4.9,
+    "reviewsCount": 82,
+    "badge": "4K Video + Stills",
+    "links": {
+      "booking": "https://example.com/media/candid-photography"
+    }
+  },
+  {
+    "id": "party-013",
+    "category": "Photography",
+    "name": "Vintage Mirror Photo Booth with Instant Prints",
+    "description": "Full-length interactive touchscreen magic mirror booth, custom photo strip design, curated prop box, and unlimited on-site prints.",
+    "price": 420,
+    "partyTypes": ["Birthday", "Wedding", "Corporate", "Housewarming"],
+    "rating": 4.8,
+    "reviewsCount": 94,
+    "badge": "Guest Keepsake",
+    "links": {
+      "booking": "https://example.com/media/mirror-booth"
+    }
+  },
+  {
+    "id": "party-014",
+    "category": "Contingency",
+    "name": "Smart Event Safety & Reserve Logistics Kit (10%)",
+    "description": "Essential buffer allocation recommended for unexpected last-minute guest additions, weather backup shields, and overtime extensions.",
+    "price": 250,
+    "partyTypes": ["Birthday", "Wedding", "Anniversary", "Corporate", "Housewarming", "Other"],
+    "rating": 5.0,
+    "reviewsCount": 204,
+    "badge": "Risk Protection",
+    "links": {
+      "booking": "https://example.com/planning/safety-buffer"
+    }
+  }
+]

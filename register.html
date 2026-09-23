@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Demo Account – PocketSmart AI</title>
+  <meta name="description" content="Register a new demo account on PocketSmart AI to create custom budget plans and personalize recommendations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Prototype:</strong> PocketSmart AI static frontend demo. Default credentials: <strong>admin / 12345</strong></span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About & Features</a></li>
+          <li><a href="index.html#planners" class="nav-link">Budget Planners</a></li>
+          <li><a href="login.html" class="nav-link">Sign In</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="auth-wrapper">
+      <div class="auth-card" style="max-width: 500px;">
+        <div class="auth-header">
+          <div class="auth-demo-badge">Demo Account Registration</div>
+          <h2>Get Started Free</h2>
+          <p>Join PocketSmart AI to create, save, and manage your budget plans</p>
+        </div>
+
+        <form id="registerForm">
+          <div class="form-group">
+            <label class="form-label" for="regFullName">Full Name <span class="required">*</span></label>
+            <input type="text" class="form-control" id="regFullName" name="fullName" placeholder="e.g. Eleanor Vance" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Email Address <span class="required">*</span></label>
+            <input type="email" class="form-control" id="regEmail" name="email" placeholder="eleanor@example.com" required />
+          </div>
+
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="regPassword">Password <span class="required">*</span></label>
+              <input type="password" class="form-control" id="regPassword" name="password" placeholder="••••••••" required minlength="4" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="regConfirmPassword">Confirm Password <span class="required">*</span></label>
+              <input type="password" class="form-control" id="regConfirmPassword" name="confirmPassword" placeholder="••••••••" required minlength="4" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; cursor: pointer; color: var(--text-secondary);">
+              <input type="checkbox" id="acceptTerms" required style="margin-top: 3px; accent-color: var(--secondary-color);" />
+              <span>I understand that this is a frontend demo and account details are stored locally in browser storage.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitRegBtn">
+            Create Demo Account
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="login.html" style="font-weight: 600;">Sign in here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">
+        PocketSmart AI Demo Prototype. Production deployment requires secure backend authentication.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('registerForm');
+      const submitBtn = document.getElementById('submitRegBtn');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fullName = form.fullName.value.trim();
+        const email = form.email.value.trim();
+        const password = form.password.value;
+        const confirmPassword = form.confirmPassword.value;
+        const acceptTerms = document.getElementById('acceptTerms').checked;
+
+        if (!acceptTerms) {
+          UI.showToast('Please acknowledge the demo terms checkbox.', 'warning');
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          UI.showToast('Passwords do not match. Please verify.', 'danger');
+          form.confirmPassword.focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Registering...';
+
+        setTimeout(() => {
+          try {
+            AuthService.register(fullName, email, password);
+            UI.showToast('Account created successfully! Redirecting...', 'success');
+            setTimeout(() => {
+              window.location.href = 'dashboard.html';
+            }, 600);
+          } catch (err) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Create Demo Account';
+            UI.showToast(err.message, 'danger');
+          }
+        }, 400);
+      });
+    });
+  </script>
+</body>
+</html>

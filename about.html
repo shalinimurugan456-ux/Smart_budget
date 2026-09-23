@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Features – PocketSmart AI</title>
+  <meta name="description" content="Discover how PocketSmart AI empowers individuals to budget smartly and make data-backed purchases across home interior, events, and jewelry.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Prototype:</strong> PocketSmart AI static frontend demo. Default credentials: <strong>admin / 12345</strong></span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About & Features</a></li>
+          <li><a href="index.html#planners" class="nav-link">Budget Planners</a></li>
+          <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header" style="max-width: 800px; margin-bottom: 2rem;">
+          <div class="section-tag">Our Vision</div>
+          <h1>Intelligent Budgeting Designed for Real Life</h1>
+          <p style="font-size: 1.15rem; line-height: 1.7;">
+            PocketSmart AI bridges the gap between financial discipline and lifestyle aspiration. Whether furnishing a modern apartment, coordinating a milestone anniversary, or choosing an heirloom jewelry piece, our platform turns overwhelming decisions into structured, delightful discovery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Philosophy -->
+    <section class="section section-subtle">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 3.5rem;">
+          <div>
+            <div class="section-tag">Zero Server Overkill</div>
+            <h2>100% Client-Side Architecture</h2>
+            <p style="margin-bottom: 1.25rem;">
+              Unlike bloated web applications that require complex Node.js runtimes, databases, and heavy server infrastructure, PocketSmart AI is engineered with <strong>HTML5, CSS3, ES6+ Vanilla JavaScript, and JSON</strong>.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              This design guarantees instant page load speeds, zero downtime vulnerabilities, full offline resilience, and effortless single-click deployment to <strong>GitHub Pages</strong>.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.95rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero backend runtime or build steps required</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.95rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full GitHub Pages compatibility with relative path resolution</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.95rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Persistent local state for plans, wishlist, and admin CRUD via localStorage</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 2.25rem; box-shadow: var(--shadow-lg);">
+            <h3 style="margin-bottom: 1.25rem; font-size: 1.35rem;">Technology Stack Matrix</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 0; font-weight: 600;">Structure:</td>
+                <td style="padding: 0.75rem 0; color: var(--text-secondary);">Semantic HTML5 (W3C Standard)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 0; font-weight: 600;">Styling:</td>
+                <td style="padding: 0.75rem 0; color: var(--text-secondary);">Pure CSS3, Custom Properties, Grid & Flexbox</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 0; font-weight: 600;">Interactivity:</td>
+                <td style="padding: 0.75rem 0; color: var(--text-secondary);">Modern Vanilla JavaScript (ES6 Modules)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 0; font-weight: 600;">Data Layer:</td>
+                <td style="padding: 0.75rem 0; color: var(--text-secondary);">Modular JSON Datasets + Embedded Fallbacks</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem 0; font-weight: 600;">Storage:</td>
+                <td style="padding: 0.75rem 0; color: var(--text-secondary);">Browser localStorage (Zero Server Leaks)</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.75rem 0; font-weight: 600;">Compatibility:</td>
+                <td style="padding: 0.75rem 0; color: var(--success-color); font-weight: 600;">GitHub Pages & Static CDNs</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep-Dive into the 3 Planners -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Category Specialization</div>
+          <h2>Three Dedicated Planning Disciplines</h2>
+          <p>Every planner has been engineered from the ground up to reflect the nuances of its domain.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-box">
+            <h3 style="margin-bottom: 0.75rem; font-size: 1.3rem;">1. Home Interior</h3>
+            <p style="margin-bottom: 1rem;">
+              Interior decoration requires balancing major anchors (sofas, tables) with ambient elements (floor lamps, downlights, ceiling fans, and artwork).
+            </p>
+            <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+              <li>• Multi-room support (Living, Kitchen, Bedroom, Office)</li>
+              <li>• Numeric quantity multiplier controls</li>
+              <li>• Modern, Minimalist, Scandinavian, Luxury styles</li>
+            </ul>
+          </div>
+
+          <div class="feature-box">
+            <h3 style="margin-bottom: 0.75rem; font-size: 1.3rem;">2. Parties & Events</h3>
+            <p style="margin-bottom: 1rem;">
+              Event budgets depend heavily on guest counts. Our engine breaks down catering on a per-guest formula and balances venue, music, and photography.
+            </p>
+            <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+              <li>• Dynamic guest count scaling</li>
+              <li>• Automatic 10% contingency safety allocation</li>
+              <li>• Indoor, outdoor, and terrace venue options</li>
+            </ul>
+          </div>
+
+          <div class="feature-box">
+            <h3 style="margin-bottom: 0.75rem; font-size: 1.3rem;">3. Jewelry & Luxury</h3>
+            <p style="margin-bottom: 1rem;">
+              Jewelry is an emotional investment. We curate pieces by metal purity, occasion formality, and styling compatibility with real fashion tips.
+            </p>
+            <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+              <li>• Gold, Platinum, Diamond, and Silver curation</li>
+              <li>• Contextual styling advice for casual & black tie</li>
+              <li>• Safe e-commerce discovery links</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-subtle">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <div class="section-tag">Got Questions?</div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">Is this platform completely free to use?</h4>
+            <p>Yes. PocketSmart AI is a client-side frontend platform. All budget planning, recommendation generation, history storage, and wishlist management functions without paywalls.</p>
+          </div>
+
+          <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">How does authentication work without a backend?</h4>
+            <p>Authentication is handled as a frontend demo using browser localStorage. You can log in using the demo credentials <strong>admin / 12345</strong> or create a custom demo user on the register page.</p>
+          </div>
+
+          <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">How can I deploy this website to GitHub Pages?</h4>
+            <p>Because all assets, stylesheets, scripts, and JSON data use relative file paths, you simply upload this folder to a GitHub repository, open Settings &gt; Pages, and select the Main branch. It deploys in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #fff;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span>Pocket<span class="highlight">Smart</span></span>
+            <span class="brand-badge">AI</span>
+          </a>
+          <p>Smart Budgeting. Personalized Recommendations. Better Decisions.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Planners</h4>
+          <ul class="footer-links">
+            <li><a href="home-planner.html">Home Interior Planner</a></li>
+            <li><a href="party-planner.html">Party & Event Planner</a></li>
+            <li><a href="jewelry-planner.html">Jewelry Budget Planner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin-login.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Status</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+            Static frontend prototype. Ready for GitHub Pages deployment.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 PocketSmart AI. All demo rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

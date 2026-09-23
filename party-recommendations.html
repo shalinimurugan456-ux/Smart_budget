@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party & Event Recommendations – PocketSmart AI</title>
+  <meta name="description" content="Personalized catering, venue, decor, and entertainment recommendations for your celebration.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Event Engine:</strong> Real-time budget monitoring including per-guest catering and contingency buffers.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link active">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+            <a href="party-planner.html" style="font-size: 0.85rem; font-weight: 600;">&larr; Adjust Event Inputs</a>
+            <span style="color: var(--muted-text-color);">•</span>
+            <span class="section-tag" style="margin: 0; padding: 0.15rem 0.5rem; font-size: 0.72rem;">Party & Events</span>
+          </div>
+          <h1 id="planTitle" style="font-size: 2.2rem; margin-bottom: 0.25rem;">Event Recommendation Package</h1>
+          <p id="planSubtitle">Catering, venue, decor, and contingency allocations for your guest list.</p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="saved.html" class="btn btn-secondary btn-sm">Wishlist</a>
+          <button class="btn btn-primary btn-sm" onclick="window.print()">Export Plan</button>
+        </div>
+      </div>
+
+      <!-- Real-time Dynamic Budget Summary Card -->
+      <div id="budgetSummaryCard" class="budget-summary-card"></div>
+
+      <!-- Search & Filters Toolbar -->
+      <div class="toolbar-container">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="recommendationSearch" placeholder="Search catering, DJs, balloons, venues..." />
+        </div>
+
+        <div class="filter-pills" id="categoryFilters"></div>
+
+        <div>
+          <select class="sort-select" id="sortSelect">
+            <option value="relevance">Sort: Recommended</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products / Services Grid -->
+      <div class="grid-3" id="productsGrid"></div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Event Recommendation Engine.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/recommendations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Recommendations.init('party');
+    });
+  </script>
+</body>
+</html>

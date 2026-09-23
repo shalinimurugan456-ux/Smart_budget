@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard – PocketSmart AI</title>
+  <meta name="description" content="Manage your smart budget plans, view saved recommendations, and review recent activity.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Session:</strong> Logged into demo workspace. Data persists locally in browser storage.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="history.html" class="nav-link">History</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+      <!-- Welcome Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div class="section-tag" style="margin-bottom: 0.5rem;">Account Overview</div>
+          <h1 style="font-size: 2.2rem; margin-bottom: 0.35rem;">
+            Welcome back, <span id="dashboardUserName" style="color: var(--secondary-color);">Planner</span>!
+          </h1>
+          <p>Here is a real-time summary of your budget plans and curated wishlists.</p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="history.html" class="btn btn-secondary btn-sm">View Plan History</a>
+          <a href="home-planner.html" class="btn btn-primary btn-sm">+ New Budget Plan</a>
+        </div>
+      </div>
+
+      <!-- Dashboard Statistics KPI Cards -->
+      <div class="budget-stats-row" style="margin-bottom: 3.5rem;">
+        <div class="budget-stat-box highlight">
+          <p class="label">Total Plans Created</p>
+          <h3 class="value" id="statTotalPlans">0</h3>
+        </div>
+        <div class="budget-stat-box">
+          <p class="label">Saved Recommendations</p>
+          <h3 class="value" id="statTotalSaved">0</h3>
+        </div>
+        <div class="budget-stat-box success">
+          <p class="label">Total Budget Planned</p>
+          <h3 class="value" id="statTotalBudget">$0</h3>
+        </div>
+        <div class="budget-stat-box">
+          <p class="label">Active Engine Modules</p>
+          <h3 class="value" id="statActivePlanners">3 Active</h3>
+        </div>
+      </div>
+
+      <!-- Quick Start Smart Planner Cards -->
+      <div style="margin-bottom: 3.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Start Planning</h2>
+            <p style="font-size: 0.9rem;">Choose an intelligent engine below to generate recommendations.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <!-- Home Card -->
+          <div class="planner-card">
+            <div class="planner-card-img-wrap" style="height: 160px;">
+              <img src="assets/images/home_thumb.jpg" alt="Home Interior" class="planner-card-img" />
+              <span class="planner-badge">Home & Decor</span>
+            </div>
+            <div class="planner-card-body" style="padding: 1.25rem;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Home Interior Planner</h3>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Room-by-room allocation for lighting, sofas, fans, and dining sets.</p>
+              <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                <a href="home-planner.html" class="btn btn-primary btn-sm" style="flex: 1;">Get Started</a>
+                <a href="home-recommendations.html" class="btn btn-secondary btn-sm">Explore Catalog</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Party Card -->
+          <div class="planner-card">
+            <div class="planner-card-img-wrap" style="height: 160px;">
+              <img src="assets/images/party_thumb.jpg" alt="Party Budget" class="planner-card-img" />
+              <span class="planner-badge">Parties & Events</span>
+            </div>
+            <div class="planner-card-body" style="padding: 1.25rem;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Party Budget Planner</h3>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Per-guest catering, venue booking, sound, decor, and contingency.</p>
+              <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                <a href="party-planner.html" class="btn btn-primary btn-sm" style="flex: 1;">Get Started</a>
+                <a href="party-recommendations.html" class="btn btn-secondary btn-sm">Explore Catalog</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jewelry Card -->
+          <div class="planner-card gold-theme">
+            <div class="planner-card-img-wrap" style="height: 160px;">
+              <img src="assets/images/jewelry_thumb.jpg" alt="Fine Jewelry" class="planner-card-img" />
+              <span class="planner-badge gold">Fine Jewelry</span>
+            </div>
+            <div class="planner-card-body" style="padding: 1.25rem;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Jewelry Budget Planner</h3>
+              <p style="font-size: 0.88rem; margin-bottom: 1rem;">Diamond engagement rings, solid 18K gold chains, watches, and styling.</p>
+              <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                <a href="jewelry-planner.html" class="btn btn-gold btn-sm" style="flex: 1;">Get Started</a>
+                <a href="jewelry-recommendations.html" class="btn btn-secondary btn-sm">Explore Catalog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity Section -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.5rem;">Recent Planning Activity</h2>
+          <a href="history.html" style="font-size: 0.88rem; font-weight: 600;">View All History &rarr;</a>
+        </div>
+
+        <div id="recentActivityList">
+          <!-- Hydrated by dashboard.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">&copy; 2026 PocketSmart AI. Demo Session.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Dashboard.init();
+    });
+  </script>
+</body>
+</html>

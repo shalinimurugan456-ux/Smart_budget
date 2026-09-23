@@ -1,0 +1,229 @@
+/* ==========================================================================
+   PocketSmart AI - Responsive Design Stylesheet
+   Breakpoints: 1440px, 1024px, 768px, 480px, 320px
+   ========================================================================== */
+
+/* Laptop & Desktop adjustments (1024px and below) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .budget-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet adjustments (768px and below) */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  /* Navigation Drawer for Mobile */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--surface-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.35s ease-in-out;
+  }
+
+  .nav-menu.open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--surface-subtle);
+  }
+
+  .nav-actions {
+    display: none; /* Merged into mobile drawer when open */
+  }
+
+  .nav-menu .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-stats {
+    justify-content: space-between;
+  }
+
+  .toolbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .filter-pills {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  .form-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cta-banner {
+    padding: 3rem 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 { font-size: 1.95rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.25rem; }
+
+  .hero {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .budget-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .modal-container {
+    margin: 1rem;
+  }
+
+  .modal-header {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+  }
+
+  .modal-footer {
+    padding: 1rem 1.25rem;
+    flex-direction: column;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+
+  .toast {
+    min-width: 90vw;
+    right: 5vw;
+  }
+}
+
+/* Small mobile (320px) */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  .brand-logo {
+    font-size: 1.15rem;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+  }
+}

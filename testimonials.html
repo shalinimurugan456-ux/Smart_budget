@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials & Reviews – PocketSmart AI</title>
+  <meta name="description" content="Read demo experiences and feedback from users who used PocketSmart AI to plan home renovations, parties, and jewelry purchases.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Prototype:</strong> PocketSmart AI static frontend demo. Default credentials: <strong>admin / 12345</strong></span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About & Features</a></li>
+          <li><a href="index.html#planners" class="nav-link">Budget Planners</a></li>
+          <li><a href="testimonials.html" class="nav-link active">Testimonials</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header" style="max-width: 750px;">
+          <div class="section-tag">User Experiences</div>
+          <h1>Demo Testimonials & Feedback</h1>
+          <p style="font-size: 1.1rem;">
+            Explore sample user experiences demonstrating how smart budget planning streamlines purchasing.
+          </p>
+          <div style="margin-top: 1rem; display: inline-block; background: #fef3c7; color: #92400e; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700;">
+            ⚠️ Notice: These are illustrative demo personas created for frontend prototype demonstration.
+          </div>
+        </div>
+
+        <!-- Filter Pills for Testimonials -->
+        <div class="toolbar-container" style="justify-content: center; margin-bottom: 3rem;">
+          <div class="filter-pills" id="testimonialFilters">
+            <button class="filter-pill active" data-filter="All">All Stories</button>
+            <button class="filter-pill" data-filter="Home Interior">Home Interior</button>
+            <button class="filter-pill" data-filter="Party & Events">Parties & Events</button>
+            <button class="filter-pill" data-filter="Jewelry & Luxury">Jewelry & Luxury</button>
+          </div>
+        </div>
+
+        <div class="grid-3" id="testimonialsPageGrid">
+          <!-- Hydrated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Demo Feedback Submission -->
+    <section class="section section-subtle">
+      <div class="container" style="max-width: 680px;">
+        <div class="form-card">
+          <div class="section-header" style="margin-bottom: 1.75rem; text-align: left;">
+            <div class="section-tag">Interactive Demo</div>
+            <h2 style="font-size: 1.6rem;">Leave Demo Feedback</h2>
+            <p>Test adding your own review. Your entry will be saved locally to this demo session.</p>
+          </div>
+
+          <form id="demoFeedbackForm">
+            <div class="form-group">
+              <label class="form-label">Your Name <span class="required">*</span></label>
+              <input type="text" class="form-control" name="author" placeholder="e.g. Rachel Adams" required />
+            </div>
+
+            <div class="grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Planner Used <span class="required">*</span></label>
+                <select class="form-control" name="category" required>
+                  <option value="Home Interior">Home Interior</option>
+                  <option value="Party & Events">Party & Events</option>
+                  <option value="Jewelry & Luxury">Jewelry & Luxury</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Rating <span class="required">*</span></label>
+                <select class="form-control" name="rating">
+                  <option value="5">⭐⭐⭐⭐⭐ (5 / 5)</option>
+                  <option value="4">⭐⭐⭐⭐ (4 / 5)</option>
+                  <option value="3">⭐⭐⭐ (3 / 5)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Review / Experience <span class="required">*</span></label>
+              <textarea class="form-control" name="quote" rows="4" placeholder="How did PocketSmart AI help you plan your budget?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Demo Review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #fff;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span>Pocket<span class="highlight">Smart</span></span>
+            <span class="brand-badge">AI</span>
+          </a>
+          <p>Smart Budgeting. Personalized Recommendations. Better Decisions.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Planners</h4>
+          <ul class="footer-links">
+            <li><a href="home-planner.html">Home Interior Planner</a></li>
+            <li><a href="party-planner.html">Party & Event Planner</a></li>
+            <li><a href="jewelry-planner.html">Jewelry Budget Planner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Features</a></li>
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin-login.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Status</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+            Static frontend prototype. Ready for GitHub Pages deployment.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 PocketSmart AI. All demo rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      let testimonials = [];
+      try {
+        const res = await fetch('data/testimonials.json');
+        if (res.ok) testimonials = await res.json();
+      } catch (e) {}
+
+      if (!testimonials || testimonials.length === 0) {
+        testimonials = [
+          {
+            id: "t-1",
+            name: "Sophia Reynolds",
+            role: "Interior Design Enthusiast",
+            location: "San Francisco, CA",
+            avatar: "SR",
+            rating: 5,
+            category: "Home Interior",
+            quote: "PocketSmart AI took the overwhelm out of furnishing our new 3-bedroom apartment. Keeping us precisely within our budget!",
+            date: "2026-08-14"
+          },
+          {
+            id: "t-2",
+            name: "Marcus & Elena Vance",
+            role: "Newlyweds & Party Hosts",
+            location: "Austin, TX",
+            avatar: "MV",
+            rating: 5,
+            category: "Party & Events",
+            quote: "Planning our 60-guest engagement party seemed impossible until we used the Party Budget Planner. Zero hidden costs.",
+            date: "2026-07-29"
+          },
+          {
+            id: "t-3",
+            name: "Devon Patel",
+            role: "Tech Founder & Fine Watch Collector",
+            location: "Seattle, WA",
+            avatar: "DP",
+            rating: 5,
+            category: "Jewelry & Luxury",
+            quote: "The jewelry curation algorithm paired my anniversary budget with timeless 18K solid gold pieces and genuine styling advice.",
+            date: "2026-09-02"
+          }
+        ];
+      }
+
+      // Merge local user-added demo reviews
+      const localAdded = JSON.parse(localStorage.getItem('pocketsmart_user_testimonials') || '[]');
+      const allTestimonials = [...localAdded, ...testimonials];
+
+      const grid = document.getElementById('testimonialsPageGrid');
+      let currentFilter = 'All';
+
+      function render(filter) {
+        const filtered = filter === 'All' 
+          ? allTestimonials 
+          : allTestimonials.filter(t => t.category === filter);
+
+        grid.innerHTML = filtered.map(t => `
+          <div class="testimonial-card">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                <span class="section-tag" style="margin:0; padding:0.2rem 0.6rem; font-size:0.72rem;">${t.category || 'Lifestyle'}</span>
+                <span style="font-size:0.75rem; color:var(--muted-text-color);">${t.date || 'Demo Review'}</span>
+              </div>
+              <div class="testimonial-rating">
+                ${'★'.repeat(t.rating || 5)}
+              </div>
+              <p class="testimonial-quote">"${t.quote}"</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">${t.avatar || t.name.slice(0, 2).toUpperCase()}</div>
+              <div class="testimonial-meta">
+                <h5>${t.name}</h5>
+                <p>${t.role || 'Community Planner'} • ${t.location || 'Demo City'}</p>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      render('All');
+
+      // Filter clicks
+      document.querySelectorAll('#testimonialFilters .filter-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#testimonialFilters .filter-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          render(btn.dataset.filter);
+        });
+      });
+
+      // Submit feedback form
+      const feedbackForm = document.getElementById('demoFeedbackForm');
+      if (feedbackForm) {
+        feedbackForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const newEntry = {
+            id: 't-user-' + Date.now(),
+            name: feedbackForm.author.value,
+            category: feedbackForm.category.value,
+            rating: Number(feedbackForm.rating.value),
+            quote: feedbackForm.quote.value,
+            role: 'Verified Demo Reviewer',
+            location: 'Local Session',
+            avatar: feedbackForm.author.value.slice(0, 2).toUpperCase(),
+            date: new Date().toISOString().split('T')[0]
+          };
+
+          localAdded.unshift(newEntry);
+          localStorage.setItem('pocketsmart_user_testimonials', JSON.stringify(localAdded));
+          allTestimonials.unshift(newEntry);
+          render(currentFilter);
+          feedbackForm.reset();
+          UI.showToast('Thank you! Your demo review has been posted.', 'success');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

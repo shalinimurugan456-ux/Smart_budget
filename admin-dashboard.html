@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard & Catalog Management – PocketSmart AI</title>
+  <meta name="description" content="Administrative control center for PocketSmart AI recommendation data, mock analytics, and demo users.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-auth="admin">
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container" style="max-width: 100%; padding: 0 1.5rem;">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge" style="background: #ef4444;">ADMIN</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="index.html" class="btn btn-secondary btn-sm" target="_blank">
+          View Live Website &nearr;
+        </a>
+        <button class="btn btn-outline btn-sm" id="adminLogoutBtn" style="color: #ef4444; border-color: #fca5a5;">
+          Sign Out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.2rem;">Portal Navigation</h4>
+        <div class="admin-badge">Demo Mode</div>
+      </div>
+
+      <ul class="admin-nav">
+        <li>
+          <a href="#" class="admin-nav-item active" data-tab="overview">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Overview & KPIs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="admin-nav-item" data-tab="catalog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            <span>Recommendation Data</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="admin-nav-item" data-tab="users">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>User Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="admin-nav-item" data-tab="analytics">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Website Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="admin-nav-item" data-tab="settings">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Admin Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="admin-sidebar-footer">
+        <p style="font-size: 0.75rem; color: #64748b;">
+          Client-Side Mock Admin Console. GitHub Pages compatible.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="admin-content">
+      
+      <!-- TAB 1: OVERVIEW -->
+      <section class="admin-tab-content active" id="tab-overview">
+        <div class="admin-header">
+          <div>
+            <h1>Dashboard Overview</h1>
+            <p>System metrics, user registrations, and recommendation catalog status.</p>
+          </div>
+          <div>
+            <button class="btn btn-primary btn-sm" onclick="Admin.switchTab('catalog'); Admin.openCreateModal();">
+              + Add Catalog Item
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI Metrics Grid -->
+        <div class="admin-kpi-grid">
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-info">
+              <p class="label">Total Demo Users</p>
+              <h3 class="value" id="kpiTotalUsers">1</h3>
+            </div>
+            <div class="admin-kpi-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-info">
+              <p class="label">Total Plans Created</p>
+              <h3 class="value" id="kpiTotalPlans">0</h3>
+            </div>
+            <div class="admin-kpi-icon emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-info">
+              <p class="label">Active Catalog Items</p>
+              <h3 class="value" id="kpiCatalogCount">0</h3>
+            </div>
+            <div class="admin-kpi-icon gold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-info">
+              <p class="label">Total Wishlist Saves</p>
+              <h3 class="value" id="kpiSavedCount">0</h3>
+            </div>
+            <div class="admin-kpi-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Activity Summary -->
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>Recent System Activity</h3>
+            <span class="section-tag" style="margin:0;">Live Local Sync</span>
+          </div>
+          <div class="admin-card-body">
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              PocketSmart AI operates seamlessly as a static web application. Any additions or edits to recommendations in the <strong>Recommendation Data</strong> tab are instantly synced to browser <code>localStorage</code> and reflected immediately across the public user recommendation views.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: RECOMMENDATION DATA MANAGEMENT (CRUD) -->
+      <section class="admin-tab-content" id="tab-catalog">
+        <div class="admin-header">
+          <div>
+            <h1>Recommendation Catalog Management</h1>
+            <p>View, add, edit, and delete product and service recommendation records.</p>
+          </div>
+          <div style="display:flex; gap:0.75rem;">
+            <button class="btn btn-secondary btn-sm" onclick="Admin.resetCatalogDemo()">Reset to Defaults</button>
+            <button class="btn btn-primary btn-sm" id="adminAddNewBtn">+ Add New Record</button>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div class="toolbar-container" style="margin: 0; width: 100%; justify-content: space-between;">
+              <div class="search-box" style="max-width: 320px;">
+                <input type="text" id="adminSearch" placeholder="Search by name, ID, category..." />
+              </div>
+
+              <div>
+                <select class="form-control" id="adminCatalogFilter" style="padding: 0.65rem 1rem;">
+                  <option value="all">All Catalogs</option>
+                  <option value="Home Interior">Home Interior</option>
+                  <option value="Party & Events">Parties & Events</option>
+                  <option value="Jewelry & Luxury">Jewelry & Luxury</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Item Name</th>
+                  <th>Catalog & Category</th>
+                  <th>Price</th>
+                  <th>Rating</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTableBody">
+                <!-- Hydrated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: USER OVERVIEW -->
+      <section class="admin-tab-content" id="tab-users">
+        <div class="admin-header">
+          <div>
+            <h1>User Accounts Overview</h1>
+            <p>Listing of demo user profiles created via client-side registration.</p>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Assigned Role</th>
+                  <th>Date Created</th>
+                </tr>
+              </thead>
+              <tbody id="adminUsersTableBody">
+                <!-- Hydrated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: WEBSITE ANALYTICS -->
+      <section class="admin-tab-content" id="tab-analytics">
+        <div class="admin-header">
+          <div>
+            <h1>Website Analytics (Demo Data)</h1>
+            <p>Simulated user engagement metrics, planner traffic distribution, and budget volume.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 2rem;">
+          <div class="admin-card" style="margin: 0;">
+            <div class="admin-card-header">
+              <h3>Monthly Planner Volume</h3>
+            </div>
+            <div class="admin-card-body">
+              <div class="analytics-chart-mock">
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="height: 40%;" data-val="140 plans"></div>
+                  <span class="chart-label">May</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="height: 60%;" data-val="210 plans"></div>
+                  <span class="chart-label">Jun</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="height: 75%;" data-val="295 plans"></div>
+                  <span class="chart-label">Jul</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="height: 90%;" data-val="380 plans"></div>
+                  <span class="chart-label">Aug</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="height: 100%;" data-val="460 plans"></div>
+                  <span class="chart-label">Sep</span>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--muted-text-color); text-align: center;">
+                Simulated 32% month-over-month growth in budget creation sessions.
+              </p>
+            </div>
+          </div>
+
+          <div class="admin-card" style="margin: 0;">
+            <div class="admin-card-header">
+              <h3>Category Traffic Breakdown</h3>
+            </div>
+            <div class="admin-card-body">
+              <div style="display: flex; flex-direction: column; gap: 1rem; padding: 1rem 0;">
+                <div>
+                  <div style="display:flex; justify-content:space-between; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">
+                    <span>Home Interior Planning</span>
+                    <span>48%</span>
+                  </div>
+                  <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                    <div style="width:48%; height:100%; background:var(--secondary-color);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display:flex; justify-content:space-between; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">
+                    <span>Party & Event Planning</span>
+                    <span>32%</span>
+                  </div>
+                  <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                    <div style="width:32%; height:100%; background:var(--accent-color);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display:flex; justify-content:space-between; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">
+                    <span>Fine Jewelry Curation</span>
+                    <span>20%</span>
+                  </div>
+                  <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                    <div style="width:20%; height:100%; background:var(--accent-gold);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: ADMIN SETTINGS -->
+      <section class="admin-tab-content" id="tab-settings">
+        <div class="admin-header">
+          <div>
+            <h1>Admin System Settings</h1>
+            <p>Maintenance options and catalog baseline configuration.</p>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>Reset Catalog to Default Baseline</h3>
+          </div>
+          <div class="admin-card-body">
+            <p style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-secondary);">
+              Resetting will clear all custom items added or modified in <code>localStorage</code>, reverting all tables back to the pristine JSON files located in <code>data/</code>.
+            </p>
+            <button class="btn btn-secondary btn-sm" onclick="Admin.resetCatalogDemo()">
+              Reset Demo Catalog Baseline
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Admin.init();
+
+      document.getElementById('adminLogoutBtn').addEventListener('click', () => {
+        AuthService.logout();
+      });
+    });
+  </script>
+</body>
+</html>

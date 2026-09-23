@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Interior Budget Planner – PocketSmart AI</title>
+  <meta name="description" content="Plan and allocate your home interior budget room-by-room with smart furniture, lighting, and fan recommendations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Prototype:</strong> Form saves drafts locally and generates a personalized recommendation session.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link active">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem; max-width: 860px;">
+      
+      <!-- Page Header -->
+      <div style="margin-bottom: 2.5rem; text-align: center;">
+        <div class="section-tag">Smart Interior Engine</div>
+        <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem;">Home Interior Budget Planner</h1>
+        <p style="font-size: 1.05rem; max-width: 600px; margin: 0 auto;">
+          Enter your total budget, target rooms, fixture quantities, and preferred design style to generate an optimized interior package.
+        </p>
+      </div>
+
+      <!-- Multi-Section Planner Form -->
+      <div class="form-card">
+        <form id="homePlannerForm">
+
+          <!-- Section 1: Budget Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="18"></line></svg>
+              1. Budget & Currency
+            </h3>
+            <p class="form-section-subtitle">Define your total capital allocation for this renovation or furnishing project.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="budget">Total Target Budget <span class="required">*</span></label>
+                <div style="position: relative;">
+                  <input type="number" class="form-control" id="budget" name="budget" placeholder="e.g. 5000" min="100" max="1000000" step="50" required />
+                </div>
+                <div style="font-size: 0.78rem; color: var(--muted-text-color); margin-top: 0.35rem;">Recommended minimum: $500 for multi-room planning.</div>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="currency">Currency</label>
+                <select class="form-control" id="currency" name="currency">
+                  <option value="USD">USD ($) – US Dollar</option>
+                  <option value="INR">INR (₹) – Indian Rupee</option>
+                  <option value="EUR">EUR (€) – Euro</option>
+                  <option value="GBP">GBP (£) – British Pound</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Rooms to Include -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+              2. Rooms to Include
+            </h3>
+            <p class="form-section-subtitle">Select the living spaces where items will be allocated.</p>
+
+            <div class="checkbox-grid">
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="rooms" value="Living Room" checked />
+                <span>Living Room</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="rooms" value="Kitchen" />
+                <span>Kitchen</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="rooms" value="Bedroom" checked />
+                <span>Bedroom</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="rooms" value="Dining Room" checked />
+                <span>Dining Room</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="rooms" value="Balcony" />
+                <span>Balcony / Patio</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="rooms" value="Home Office" />
+                <span>Home Office</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 3: Furniture & Fixtures Quantities -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              3. Furniture & Fixtures Quantities
+            </h3>
+            <p class="form-section-subtitle">Specify estimated fixture counts so our algorithm calculates unit multipliers accurately.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="lightsCount">Number of Lights / Fixtures</label>
+                <input type="number" class="form-control" id="lightsCount" name="lightsCount" min="0" max="50" value="4" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="fansCount">Number of Ceiling Fans</label>
+                <input type="number" class="form-control" id="fansCount" name="fansCount" min="0" max="20" value="2" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="furnitureCount">Major Furniture Pieces (Sofas, Credenzas)</label>
+                <input type="number" class="form-control" id="furnitureCount" name="furnitureCount" min="0" max="30" value="3" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="diningCount">Dining Tables</label>
+                <input type="number" class="form-control" id="diningCount" name="diningCount" min="0" max="5" value="1" required />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Style Preferences -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              4. Design Style Preference
+            </h3>
+            <p class="form-section-subtitle">Choose the core aesthetic theme for your furniture and decorative elements.</p>
+
+            <div class="form-group" style="margin: 0;">
+              <select class="form-control" id="style" name="style">
+                <option value="Modern">Modern – Clean lines, neutral palette, architectural forms</option>
+                <option value="Scandinavian" selected>Scandinavian – Warm solid woods, light airy textiles, organic curves</option>
+                <option value="Minimalist">Minimalist – Uncluttered spaces, monochrome tones, concealed storage</option>
+                <option value="Luxury">Luxury – Rich velvets, marble tabletops, brushed brass accents</option>
+                <option value="Traditional">Traditional – Classic moldings, ornate woodwork, warm ambient tones</option>
+                <option value="Industrial">Industrial – Exposed metals, raw teak, dark matte finishes</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Section 5: Additional Requirements -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              5. Additional Specifications (Optional)
+            </h3>
+            <p class="form-section-subtitle">Mention room square footage, color preferences, or specific brand affinities.</p>
+
+            <div class="form-group" style="margin: 0;">
+              <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="e.g. 1,200 sq ft condo, prefer oak wood, warm white 3000K lighting, pet-friendly stain-resistant sofa upholstery..."></textarea>
+            </div>
+          </div>
+
+          <!-- Form Buttons -->
+          <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 1.5rem;">
+            <div style="display: flex; gap: 0.75rem;">
+              <button type="button" class="btn btn-secondary btn-sm" id="saveDraftBtn">
+                Save Draft
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" id="resetFormBtn" style="color: var(--muted-text-color); border-color: var(--border-color);">
+                Reset Form
+              </button>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="submitHomeBtn">
+              Generate Recommendations &rarr;
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Home Planner Engine. All calculations performed client-side.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/planners.js"></script>
+</body>
+</html>

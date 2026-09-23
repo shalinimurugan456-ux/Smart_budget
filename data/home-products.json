@@ -1,0 +1,344 @@
+[
+  {
+    "id": "home-001",
+    "category": "Lighting",
+    "name": "Aura Smart Ambient Arc Floor Lamp",
+    "description": "Minimalist brushed brass arc floor lamp with 3000K-6500K tunable smart warm-to-cool LED lighting and touch dimmer.",
+    "price": 149,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Living Room", "Bedroom", "Home Office"],
+    "rating": 4.8,
+    "reviewsCount": 128,
+    "dimensions": "65\"H x 18\"W",
+    "badge": "Bestseller",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=modern+arc+floor+lamp",
+      "flipkart": "https://www.flipkart.com/search?q=modern+floor+lamp"
+    }
+  },
+  {
+    "id": "home-002",
+    "category": "Lighting",
+    "name": "Nordic Halo Linear Pendant Chandelier",
+    "description": "Sleek matte black architectural suspended chandelier ideal for dining areas and kitchen islands with glare-free diffuser.",
+    "price": 220,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Scandinavian",
+    "rooms": ["Dining Room", "Kitchen"],
+    "rating": 4.9,
+    "reviewsCount": 84,
+    "dimensions": "48\"L x 5\"H",
+    "badge": "Top Rated",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=nordic+linear+pendant+light",
+      "flipkart": "https://www.flipkart.com/search?q=pendant+light"
+    }
+  },
+  {
+    "id": "home-003",
+    "category": "Lighting",
+    "name": "Lumina Recessed Smart LED Downlights (Pack of 6)",
+    "description": "Energy-efficient 12W ultra-thin dimmable recessed wafer lights with smartphone color temperature adjustment.",
+    "price": 85,
+    "quantity": 2,
+    "currency": "USD",
+    "style": "Minimalist",
+    "rooms": ["Living Room", "Kitchen", "Bedroom", "Dining Room"],
+    "rating": 4.7,
+    "reviewsCount": 210,
+    "dimensions": "6-inch diameter",
+    "badge": "Energy Saver",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=smart+recessed+led+lights",
+      "flipkart": "https://www.flipkart.com/search?q=led+downlights"
+    }
+  },
+  {
+    "id": "home-004",
+    "category": "Lighting",
+    "name": "Artisan Ribbed Glass Wall Sconces (Set of 2)",
+    "description": "Mid-century modern hand-blown fluted amber glass wall lights with antiqued brushed brass mounting plate.",
+    "price": 115,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Traditional",
+    "rooms": ["Living Room", "Bedroom", "Balcony"],
+    "rating": 4.6,
+    "reviewsCount": 62,
+    "dimensions": "12\"H x 6\"W",
+    "badge": "Artisan",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=glass+wall+sconces",
+      "flipkart": "https://www.flipkart.com/search?q=wall+sconces"
+    }
+  },
+  {
+    "id": "home-005",
+    "category": "Ceiling Fans",
+    "name": "BreezeSmart DC Motor Ultra-Quiet Fan with Light",
+    "description": "Whisper-quiet 6-speed reversible brushless DC motor fan with integrated dimmable LED light kit and wireless remote.",
+    "price": 185,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Living Room", "Bedroom"],
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "dimensions": "52\" Blade Span",
+    "badge": "Whisper Quiet",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=quiet+dc+motor+ceiling+fan",
+      "flipkart": "https://www.flipkart.com/search?q=ceiling+fan+with+led"
+    }
+  },
+  {
+    "id": "home-006",
+    "category": "Ceiling Fans",
+    "name": "Oslo Carved Solid Walnut Wood Ceiling Fan",
+    "description": "Crafted with 3 solid aerodynamic natural walnut blades, moisture-resistant finish for covered patios and stylish interiors.",
+    "price": 275,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Scandinavian",
+    "rooms": ["Living Room", "Dining Room", "Balcony"],
+    "rating": 4.9,
+    "reviewsCount": 94,
+    "dimensions": "60\" Blade Span",
+    "badge": "Premium Wood",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=solid+wood+ceiling+fan",
+      "flipkart": "https://www.flipkart.com/search?q=wooden+blade+ceiling+fan"
+    }
+  },
+  {
+    "id": "home-007",
+    "category": "Ceiling Fans",
+    "name": "Kona Low-Profile Hugger Ceiling Fan",
+    "description": "Space-saving flush mount ceiling fan engineered specifically for lower ceilings (under 8.5ft) with timer control.",
+    "price": 139,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Minimalist",
+    "rooms": ["Bedroom", "Home Office", "Kitchen"],
+    "rating": 4.5,
+    "reviewsCount": 112,
+    "dimensions": "44\" Blade Span",
+    "badge": "Compact",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=flush+mount+ceiling+fan",
+      "flipkart": "https://www.flipkart.com/search?q=low+profile+ceiling+fan"
+    }
+  },
+  {
+    "id": "home-008",
+    "category": "Furniture",
+    "name": "Haven Modular 3-Piece Sectional Sofa",
+    "description": "Deep-seated luxury performance linen fabric sofa with high-resilience foam core and reversible modular chaise orientation.",
+    "price": 890,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Living Room"],
+    "rating": 4.9,
+    "reviewsCount": 340,
+    "dimensions": "104\"W x 65\"D x 33\"H",
+    "badge": "Signature Piece",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=modular+sectional+sofa",
+      "flipkart": "https://www.flipkart.com/search?q=sectional+sofa"
+    }
+  },
+  {
+    "id": "home-009",
+    "category": "Furniture",
+    "name": "Koben Velvet Accent Swivel Armchair",
+    "description": "Curved silhouette mid-century reading armchair upholstered in stain-resistant emerald green velvet with hidden 360-degree swivel.",
+    "price": 280,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Luxury",
+    "rooms": ["Living Room", "Bedroom", "Home Office"],
+    "rating": 4.7,
+    "reviewsCount": 98,
+    "dimensions": "32\"W x 31\"D x 30\"H",
+    "badge": "Designer Choice",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=velvet+swivel+accent+chair",
+      "flipkart": "https://www.flipkart.com/search?q=velvet+accent+chair"
+    }
+  },
+  {
+    "id": "home-010",
+    "category": "Furniture",
+    "name": "Modena Solid White Oak Coffee Table with Storage",
+    "description": "Minimalist low-profile Japanese-inspired oak table with soft-close hidden storage drawer and open shelf for books.",
+    "price": 240,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Scandinavian",
+    "rooms": ["Living Room"],
+    "rating": 4.8,
+    "reviewsCount": 85,
+    "dimensions": "47\"L x 23\"W x 16\"H",
+    "badge": "Solid Wood",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=solid+oak+coffee+table",
+      "flipkart": "https://www.flipkart.com/search?q=wooden+coffee+table"
+    }
+  },
+  {
+    "id": "home-011",
+    "category": "Furniture",
+    "name": "Vanguard Floating TV Console & Media Credenza",
+    "description": "Wall-mounted entertainment center with slatted acoustic front doors, built-in wire management conduits, and soundbar cutout.",
+    "price": 310,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Living Room"],
+    "rating": 4.7,
+    "reviewsCount": 115,
+    "dimensions": "70\"W x 14\"D x 12\"H",
+    "badge": "Space Saver",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=floating+tv+console",
+      "flipkart": "https://www.flipkart.com/search?q=wall+mount+tv+unit"
+    }
+  },
+  {
+    "id": "home-012",
+    "category": "Dining Tables",
+    "name": "Astoria Extendable Walnut Dining Table (Seats 6-8)",
+    "description": "Engineered with a smooth butterfly leaf extension mechanism, American walnut veneer tabletop, and solid wood angled splayed legs.",
+    "price": 620,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Dining Room"],
+    "rating": 4.8,
+    "reviewsCount": 77,
+    "dimensions": "64\"-82\"L x 36\"W x 30\"H",
+    "badge": "Extendable",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=extendable+dining+table",
+      "flipkart": "https://www.flipkart.com/search?q=extendable+dining+table"
+    }
+  },
+  {
+    "id": "home-013",
+    "category": "Dining Tables",
+    "name": "Verona White Faux Marble Round Dining Table",
+    "description": "Space-conscious 48-inch round sintered stone dining table with heavy-duty matte black steel pedestal trumpet base.",
+    "price": 450,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Luxury",
+    "rooms": ["Dining Room", "Kitchen"],
+    "rating": 4.9,
+    "reviewsCount": 63,
+    "dimensions": "48\" Diameter x 30\"H",
+    "badge": "Scratch Resistant",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=round+marble+dining+table",
+      "flipkart": "https://www.flipkart.com/search?q=round+dining+table"
+    }
+  },
+  {
+    "id": "home-014",
+    "category": "Dining Tables",
+    "name": "Fjord Solid Beech Dining Table with 4 Chairs Set",
+    "description": "Clean-lined Scandinavian 5-piece dining package crafted from FSC-certified beech wood with ergonomic curved spindle chairs.",
+    "price": 540,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Scandinavian",
+    "rooms": ["Dining Room"],
+    "rating": 4.6,
+    "reviewsCount": 89,
+    "dimensions": "59\"L x 32\"W x 29.5\"H",
+    "badge": "Complete Set",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=dining+table+set+4+chairs",
+      "flipkart": "https://www.flipkart.com/search?q=dining+table+set"
+    }
+  },
+  {
+    "id": "home-015",
+    "category": "Decor",
+    "name": "Nordic Textured Hand-Tufted Wool Area Rug (8x10)",
+    "description": "Ultra-soft premium high-density wool area rug featuring subtle neutral geometric motifs with braided cotton fringe edges.",
+    "price": 320,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Scandinavian",
+    "rooms": ["Living Room", "Bedroom", "Dining Room"],
+    "rating": 4.9,
+    "reviewsCount": 142,
+    "dimensions": "8 ft x 10 ft",
+    "badge": "Natural Wool",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=hand+tufted+wool+area+rug",
+      "flipkart": "https://www.flipkart.com/search?q=living+room+rug"
+    }
+  },
+  {
+    "id": "home-016",
+    "category": "Decor",
+    "name": "Brutalist Matte Ceramic Vase Trio",
+    "description": "Sculptural stoneware vases with textured clay matte glaze, curated in three graduated heights for architectural dried floral styling.",
+    "price": 65,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Minimalist",
+    "rooms": ["Living Room", "Dining Room", "Bedroom", "Balcony"],
+    "rating": 4.7,
+    "reviewsCount": 88,
+    "dimensions": "Heights: 6\", 8\", 10\"",
+    "badge": "Set of 3",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=ceramic+vase+set",
+      "flipkart": "https://www.flipkart.com/search?q=ceramic+vase"
+    }
+  },
+  {
+    "id": "home-017",
+    "category": "Decor",
+    "name": "Solstice Oversized Brass Arch Floor Mirror",
+    "description": "Floor-standing full-length arch mirror with shatterproof HD glass, slender brushed gold aluminum frame, and anti-tipping mount.",
+    "price": 195,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Luxury",
+    "rooms": ["Living Room", "Bedroom"],
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "dimensions": "71\"H x 32\"W",
+    "badge": "Statement Accent",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=arched+floor+mirror",
+      "flipkart": "https://www.flipkart.com/search?q=full+length+mirror"
+    }
+  },
+  {
+    "id": "home-018",
+    "category": "Decor",
+    "name": "Earthy Minimalist Framed Canvas Gallery Set (Triptych)",
+    "description": "Museum-grade canvas prints with subtle abstract textured forms enclosed in natural solid pine wood float frames.",
+    "price": 135,
+    "quantity": 1,
+    "currency": "USD",
+    "style": "Modern",
+    "rooms": ["Living Room", "Home Office", "Dining Room"],
+    "rating": 4.7,
+    "reviewsCount": 95,
+    "dimensions": "24\"x36\" each (3 pcs)",
+    "badge": "Gallery Pack",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=abstract+framed+canvas+set",
+      "flipkart": "https://www.flipkart.com/search?q=wall+paintings+framed"
+    }
+  }
+]

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party & Event Budget Planner – PocketSmart AI</title>
+  <meta name="description" content="Plan milestone events, weddings, birthdays, and corporate celebrations with guest-based budget formulas.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Event Engine:</strong> Automated catering calculations per guest and transparent 10% contingency allocation.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link active">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem; max-width: 860px;">
+      
+      <div style="margin-bottom: 2.5rem; text-align: center;">
+        <div class="section-tag">Event Planning Engine</div>
+        <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem;">Party & Event Budget Planner</h1>
+        <p style="font-size: 1.05rem; max-width: 600px; margin: 0 auto;">
+          Balance per-guest catering, venue rental, live entertainment, and risk contingency buffers effortlessly.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <form id="partyPlannerForm">
+
+          <!-- Section 1: Basic Information -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              1. Event Overview
+            </h3>
+            <p class="form-section-subtitle">Set your total capital, expected guest count, and event occasion.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="partyBudget">Total Target Budget ($) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="partyBudget" name="budget" placeholder="e.g. 4000" min="200" max="1000000" step="50" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="partyGuests">Number of Guests <span class="required">*</span></label>
+                <input type="number" class="form-control" id="partyGuests" name="guests" placeholder="e.g. 35" min="2" max="5000" value="30" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="partyType">Occasion / Party Type</label>
+                <select class="form-control" id="partyType" name="partyType">
+                  <option value="Birthday">Birthday Celebration</option>
+                  <option value="Wedding">Wedding Reception / Banquet</option>
+                  <option value="Anniversary">Milestone Anniversary</option>
+                  <option value="Corporate">Corporate Gala / Dinner</option>
+                  <option value="Housewarming">Housewarming Gathering</option>
+                  <option value="Other">Social Gathering / Other</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="eventDate">Target Event Date (Optional)</label>
+                <input type="date" class="form-control" id="eventDate" name="eventDate" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Venue Preference -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+              2. Venue & Setting
+            </h3>
+            <p class="form-section-subtitle">Select the preferred environment for your celebration.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="venueType">Venue Setting</label>
+                <select class="form-control" id="venueType" name="venueType">
+                  <option value="Indoor">Indoor (Loft, Banquet Hall, Private Dining)</option>
+                  <option value="Outdoor">Outdoor (Rooftop, Garden Lawn, Poolside)</option>
+                  <option value="Indoor / Outdoor" selected>Hybrid Indoor / Outdoor (Glasshouse, Villa)</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="eventLocation">Preferred City / Region (Optional)</label>
+                <input type="text" class="form-control" id="eventLocation" name="location" placeholder="e.g. Austin, TX" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Party Needs -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              3. Services & Event Needs
+            </h3>
+            <p class="form-section-subtitle">Check the elements required for your event package.</p>
+
+            <div class="checkbox-grid">
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="needs" value="Catering" checked />
+                <span>Catering & Drinks</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="needs" value="Decoration" checked />
+                <span>Theme Decoration</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="needs" value="Entertainment" checked />
+                <span>DJ / Live Music</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="needs" value="Photography" checked />
+                <span>Photography & Video</span>
+              </label>
+
+              <label class="checkbox-card selected">
+                <input type="checkbox" name="needs" value="Venue" checked />
+                <span>Venue Rental</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="needs" value="Invitations" />
+                <span>Custom Invitations</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 4: Dietary & Special Notes -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+              4. Dietary & Special Notes
+            </h3>
+            <p class="form-section-subtitle">Mention theme colors, vegetarian/gluten-free options, or music styles.</p>
+
+            <div class="form-group" style="margin: 0;">
+              <textarea class="form-control" id="partyNotes" name="notes" rows="3" placeholder="e.g. Vegetarian friendly options needed, retro 80s music vibe, champagne toast at 9 PM..."></textarea>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 1.5rem;">
+            <button type="button" class="btn btn-secondary btn-sm" id="savePartyDraftBtn">
+              Save Draft
+            </button>
+
+            <button type="submit" class="btn btn-primary btn-lg">
+              Generate Event Recommendations &rarr;
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Event Budget Engine.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/planners.js"></script>
+</body>
+</html>

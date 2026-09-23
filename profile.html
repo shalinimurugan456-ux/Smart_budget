@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile & Settings – PocketSmart AI</title>
+  <meta name="description" content="Manage your PocketSmart AI profile preferences, default currency, and demo session settings.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-auth="required">
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Demo Profile:</strong> Preferences are stored locally in browser storage.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="history.html" class="nav-link">History</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li><a href="profile.html" class="nav-link active">Profile</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem; max-width: 760px;">
+      
+      <div style="margin-bottom: 2.5rem;">
+        <div class="section-tag">Account Settings</div>
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.35rem;">User Profile & Preferences</h1>
+        <p>Manage your display details, currency formatting, and local demo data.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="profileForm">
+          <!-- User Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Account Information
+            </h3>
+            <p class="form-section-subtitle">Your active demo session credentials.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="profileName">Display Name</label>
+                <input type="text" class="form-control" id="profileName" name="name" value="Alex Mercer" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="profileEmail">Email Address</label>
+                <input type="email" class="form-control" id="profileEmail" name="email" value="admin@pocketsmart.ai" required />
+              </div>
+            </div>
+          </div>
+
+          <!-- Currency & Preferences -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              Platform Preferences
+            </h3>
+            <p class="form-section-subtitle">Configure preferred currency for recommendations and budget gauges.</p>
+
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label" for="prefCurrency">Default Currency</label>
+              <select class="form-control" id="prefCurrency" name="currency">
+                <option value="USD">USD ($) – US Dollar</option>
+                <option value="INR">INR (₹) – Indian Rupee</option>
+                <option value="EUR">EUR (€) – Euro</option>
+                <option value="GBP">GBP (£) – British Pound</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Save Button -->
+          <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary">
+              Save Preferences
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Danger Zone: Reset Data -->
+      <div class="form-card" style="margin-top: 2rem; border-color: rgba(239, 68, 68, 0.35); background: rgba(239, 68, 68, 0.08);">
+        <h3 style="color: #f87171; font-size: 1.2rem; margin-bottom: 0.35rem;">Demo Session Reset</h3>
+        <p style="font-size: 0.88rem; color: #fca5a5; margin-bottom: 1.25rem;">
+          Clear all locally saved plans, wishlist bookmarks, and custom demo reviews to restore initial prototype state.
+        </p>
+        <button type="button" class="btn btn-danger btn-sm" id="resetAllDemoDataBtn">
+          Clear All Local Demo Data
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Profile Settings.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = AuthService.getCurrentUser();
+      const settings = StorageService.getSettings();
+
+      if (user) {
+        document.getElementById('profileName').value = user.name || '';
+        document.getElementById('profileEmail').value = user.email || '';
+      }
+      if (settings && settings.currency) {
+        document.getElementById('prefCurrency').value = settings.currency;
+      }
+
+      // Save form
+      document.getElementById('profileForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const updatedName = document.getElementById('profileName').value;
+        const updatedEmail = document.getElementById('profileEmail').value;
+        const updatedCurrency = document.getElementById('prefCurrency').value;
+
+        if (user) {
+          user.name = updatedName;
+          user.email = updatedEmail;
+          StorageService.setAuthUser(user);
+        }
+
+        StorageService.saveSettings({ currency: updatedCurrency });
+        UI.showToast('Profile preferences updated successfully!', 'success');
+      });
+
+      // Reset Demo Data
+      document.getElementById('resetAllDemoDataBtn').addEventListener('click', () => {
+        UI.openModal({
+          title: 'Confirm Reset',
+          bodyHtml: '<p>This will erase your locally saved plans, wishlists, and custom products, resetting to fresh demo defaults.</p>',
+          confirmText: 'Reset Everything',
+          onConfirm: () => {
+            localStorage.clear();
+            UI.showToast('Demo data cleared. Reloading...', 'info');
+            setTimeout(() => {
+              window.location.href = 'index.html';
+            }, 600);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

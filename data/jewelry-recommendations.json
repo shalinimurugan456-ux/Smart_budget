@@ -1,0 +1,230 @@
+[
+  {
+    "id": "jwl-001",
+    "category": "Rings",
+    "name": "Celestial Solitaire Diamond Pavé Ring",
+    "description": "Round brilliant-cut lab-certified 1.2 carat center diamond (VS1, E color) set in a 14K white gold band adorned with micro-pavé diamonds.",
+    "price": 1850,
+    "metal": "Diamond",
+    "color": "Silver / White",
+    "style": "Luxury",
+    "occasions": ["Wedding", "Anniversary", "Gift"],
+    "stylingTip": "Pairs exquisitely with tailored cocktail gowns or simple cashmere knitwear to let the center stone sparkle.",
+    "rating": 5.0,
+    "reviewsCount": 42,
+    "badge": "Heirloom Grade",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=solitaire+diamond+pave+ring",
+      "flipkart": "https://www.flipkart.com/search?q=diamond+ring"
+    }
+  },
+  {
+    "id": "jwl-002",
+    "category": "Rings",
+    "name": "Aurelia 18K Solid Gold Sculptural Dome Ring",
+    "description": "Bold yet effortlessly understated high-polish dome ring cast in rich 18K yellow gold with a smooth comfort-fit interior curve.",
+    "price": 420,
+    "metal": "Gold",
+    "color": "Yellow Gold",
+    "style": "Modern",
+    "occasions": ["Casual", "Party", "Formal"],
+    "stylingTip": "Stack with delicate thin wire bands on adjacent fingers for a bold, contemporary everyday luxury statement.",
+    "rating": 4.8,
+    "reviewsCount": 76,
+    "badge": "Trendsetter",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=18k+gold+dome+ring",
+      "flipkart": "https://www.flipkart.com/search?q=gold+ring"
+    }
+  },
+  {
+    "id": "jwl-003",
+    "category": "Rings",
+    "name": "Verona Vintage Emerald & Diamond Halo Ring",
+    "description": "Art Deco inspired 1.5ct octagonal natural green Colombian emerald framed by a geometric starburst halo of round brilliant diamonds.",
+    "price": 2200,
+    "metal": "Platinum",
+    "color": "Emerald Green & Platinum",
+    "style": "Traditional",
+    "occasions": ["Wedding", "Anniversary", "Party"],
+    "stylingTip": "Ideal for gala evenings and formal weddings, providing an instant pop of royal regal emerald color.",
+    "rating": 4.9,
+    "reviewsCount": 38,
+    "badge": "Collector's Item",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=emerald+halo+ring",
+      "flipkart": "https://www.flipkart.com/search?q=emerald+ring"
+    }
+  },
+  {
+    "id": "jwl-004",
+    "category": "Necklaces",
+    "name": "Lumière Floating Solitaire Diamond Pendant",
+    "description": "A bezel-set 0.50 carat sparkling round diamond suspended delicately on an adjustable 16-18\" 14K yellow gold cable chain.",
+    "price": 890,
+    "metal": "Diamond",
+    "color": "Yellow Gold",
+    "style": "Minimalist",
+    "occasions": ["Casual", "Gift", "Formal", "Anniversary"],
+    "stylingTip": "The ultimate capsule wardrobe necklace; wear solo with crisp collared shirts or layer with a herringbone chain.",
+    "rating": 4.9,
+    "reviewsCount": 114,
+    "badge": "Wardrobe Staple",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=floating+diamond+pendant",
+      "flipkart": "https://www.flipkart.com/search?q=diamond+pendant"
+    }
+  },
+  {
+    "id": "jwl-005",
+    "category": "Necklaces",
+    "name": "Palermo 14K Bold Paperclip Link Chain",
+    "description": "Modern Italian rectangular elongated links handcrafted with mirror finish in durable 14K solid gold with lobster trigger clasp.",
+    "price": 620,
+    "metal": "Gold",
+    "color": "Yellow Gold",
+    "style": "Modern",
+    "occasions": ["Casual", "Party", "Gift"],
+    "stylingTip": "Fasten charms or personalized pendants to the elongated links for a personalized custom heirloom look.",
+    "rating": 4.7,
+    "reviewsCount": 89,
+    "badge": "Best Seller",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=14k+paperclip+necklace",
+      "flipkart": "https://www.flipkart.com/search?q=gold+chain"
+    }
+  },
+  {
+    "id": "jwl-006",
+    "category": "Necklaces",
+    "name": "Sirena Baroque Freshwater Pearl Choker",
+    "description": "Irregular organic baroque freshwater pearls hand-knotted on pure silk cord with a 24K gold-plated custom toggle closure.",
+    "price": 280,
+    "metal": "Rose Gold",
+    "color": "Pearlescent White & Gold",
+    "style": "Classic",
+    "occasions": ["Wedding", "Party", "Casual"],
+    "stylingTip": "Adds effortless high-fashion chic when styled over an oversized black blazer or linen sundress.",
+    "rating": 4.8,
+    "reviewsCount": 63,
+    "badge": "Organic Pearl",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=baroque+pearl+necklace",
+      "flipkart": "https://www.flipkart.com/search?q=pearl+necklace"
+    }
+  },
+  {
+    "id": "jwl-007",
+    "category": "Bracelets",
+    "name": "Eternity 3.0 ctw Diamond Tennis Bracelet",
+    "description": "A continuous line of 55 four-prong hand-set brilliant cut round diamonds in 14K white gold with double security safety latch.",
+    "price": 2450,
+    "metal": "Diamond",
+    "color": "Silver / White",
+    "style": "Luxury",
+    "occasions": ["Wedding", "Anniversary", "Formal"],
+    "stylingTip": "A timeless classic that pairs effortlessly alongside a fine Swiss luxury watch or shines as a solitary hero piece.",
+    "rating": 5.0,
+    "reviewsCount": 51,
+    "badge": "Iconic",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=diamond+tennis+bracelet",
+      "flipkart": "https://www.flipkart.com/search?q=tennis+bracelet"
+    }
+  },
+  {
+    "id": "jwl-008",
+    "category": "Bracelets",
+    "name": "Milano Flat Herringbone Fluid Gold Bracelet",
+    "description": "Ultra-sleek 4mm liquid-like flat herringbone weave in 14K solid yellow gold, contouring seamlessly around the wrist curve.",
+    "price": 310,
+    "metal": "Gold",
+    "color": "Yellow Gold",
+    "style": "Minimalist",
+    "occasions": ["Casual", "Formal", "Gift"],
+    "stylingTip": "Its reflective mirror shine captures indoor ambient light beautifully; keep other wrist accessories minimal.",
+    "rating": 4.7,
+    "reviewsCount": 102,
+    "badge": "High Shine",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=gold+herringbone+bracelet",
+      "flipkart": "https://www.flipkart.com/search?q=gold+bracelet"
+    }
+  },
+  {
+    "id": "jwl-009",
+    "category": "Earrings",
+    "name": "Solas 1.0 ctw Classic Round Diamond Studs",
+    "description": "Matching pair of lab-grown diamonds (0.50ct each, F/VS2) set in 3-prong martini settings in hypoallergenic 14K white gold.",
+    "price": 780,
+    "metal": "Diamond",
+    "color": "Silver / White",
+    "style": "Classic",
+    "occasions": ["Casual", "Wedding", "Formal", "Gift", "Anniversary"],
+    "stylingTip": "The ultimate versatile everyday luxury; suitable from breakfast board meetings to black-tie evening galas.",
+    "rating": 4.9,
+    "reviewsCount": 165,
+    "badge": "Essential",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=1ctw+diamond+studs",
+      "flipkart": "https://www.flipkart.com/search?q=diamond+earrings"
+    }
+  },
+  {
+    "id": "jwl-010",
+    "category": "Earrings",
+    "name": "Twisted Wave 14K Chunky Huggie Hoops",
+    "description": "Modern sculptural mini huggies with secure click-lock hinge mechanism, crafted in hollow lightweight 14K yellow gold.",
+    "price": 190,
+    "metal": "Gold",
+    "color": "Yellow Gold",
+    "style": "Modern",
+    "occasions": ["Casual", "Party"],
+    "stylingTip": "Extremely comfortable for 24/7 wear; pairs cleanly with multiple lobe piercings and cartilage ear cuffs.",
+    "rating": 4.8,
+    "reviewsCount": 135,
+    "badge": "Daily Wear",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=gold+huggie+hoops",
+      "flipkart": "https://www.flipkart.com/search?q=gold+hoops"
+    }
+  },
+  {
+    "id": "jwl-011",
+    "category": "Watches",
+    "name": "Geneva Chrono Royale 18K Gold Automatic Watch",
+    "description": "Swiss movement luxury automatic chronograph with sunburst cream dial, sapphire anti-reflective crystal, and integrated oyster gold bracelet.",
+    "price": 3400,
+    "metal": "Gold",
+    "color": "Yellow Gold",
+    "style": "Luxury",
+    "occasions": ["Formal", "Anniversary", "Wedding"],
+    "stylingTip": "Let the watch peek naturally beneath tailored shirt cuffs; ideal accompaniment for formal suits and tuxedo jackets.",
+    "rating": 5.0,
+    "reviewsCount": 29,
+    "badge": "Horology Masterpiece",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=gold+automatic+chronograph+watch",
+      "flipkart": "https://www.flipkart.com/search?q=luxury+gold+watch"
+    }
+  },
+  {
+    "id": "jwl-012",
+    "category": "Watches",
+    "name": "Nordic Minimalist Ultra-Thin Steel Mesh Watch",
+    "description": "Contemporary 38mm brushed stainless steel dress timepiece with sapphire dial face, mesh magnetic strap, and 50m water resistance.",
+    "price": 240,
+    "metal": "Silver",
+    "color": "Silver / Steel",
+    "style": "Minimalist",
+    "occasions": ["Casual", "Formal", "Gift"],
+    "stylingTip": "Slim 6.5mm profile slides seamlessly under any sleeve; ideal for modern professionals and tech minimalists.",
+    "rating": 4.7,
+    "reviewsCount": 81,
+    "badge": "Sleek Profile",
+    "links": {
+      "amazon": "https://www.amazon.com/s?k=minimalist+mesh+watch",
+      "flipkart": "https://www.flipkart.com/search?q=mesh+strap+watch"
+    }
+  }
+]

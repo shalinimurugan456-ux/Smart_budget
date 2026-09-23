@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Recommendations (Wishlist) – PocketSmart AI</title>
+  <meta name="description" content="View your bookmarked furniture, party services, and jewelry recommendations in one place.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Saved Wishlist:</strong> Items bookmarked across any planner are stored in browser localStorage.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="history.html" class="nav-link">History</a></li>
+          <li><a href="saved.html" class="nav-link active">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div class="section-tag">Wishlist</div>
+          <h1 style="font-size: 2.2rem; margin-bottom: 0.35rem;">Saved Recommendations</h1>
+          <p>Review and organize items you have bookmarked from your budget plans.</p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="dashboard.html" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+        </div>
+      </div>
+
+      <!-- Filter by Category Toolbar -->
+      <div class="toolbar-container" style="margin-bottom: 2.5rem;">
+        <div class="filter-pills" id="savedFilters">
+          <button class="filter-pill active" data-filter="All">All Saved Items</button>
+          <button class="filter-pill" data-filter="Home">Home Interior</button>
+          <button class="filter-pill" data-filter="Party">Parties & Events</button>
+          <button class="filter-pill" data-filter="Jewelry">Fine Jewelry</button>
+        </div>
+      </div>
+
+      <!-- Saved Items Grid -->
+      <div class="grid-3" id="savedGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Wishlist Service.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentFilter = 'All';
+
+      function renderSavedItems() {
+        const grid = document.getElementById('savedGrid');
+        if (!grid) return;
+
+        let items = StorageService.getSavedItems();
+
+        if (currentFilter !== 'All') {
+          items = items.filter(i => {
+            const id = i.id || '';
+            const cat = i.category || '';
+            if (currentFilter === 'Home') return id.startsWith('home') || ['Lighting', 'Furniture', 'Ceiling Fans', 'Dining Tables', 'Decor'].includes(cat);
+            if (currentFilter === 'Party') return id.startsWith('party') || ['Catering', 'Venue', 'Decoration', 'Entertainment', 'Photography', 'Contingency'].includes(cat);
+            if (currentFilter === 'Jewelry') return id.startsWith('jwl') || ['Rings', 'Necklaces', 'Bracelets', 'Earrings', 'Watches'].includes(cat);
+            return true;
+          });
+        }
+
+        if (items.length === 0) {
+          grid.innerHTML = `
+            <div style="grid-column: 1 / -1;">
+              <div class="empty-state">
+                <div class="empty-state-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h3>Your Wishlist is Empty</h3>
+                <p>Bookmark items by clicking the bookmark ribbon icon on any recommendation card.</p>
+                <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                  <a href="home-recommendations.html" class="btn btn-primary btn-sm">Explore Home Catalog</a>
+                  <a href="party-recommendations.html" class="btn btn-secondary btn-sm">Explore Party Catalog</a>
+                  <a href="jewelry-recommendations.html" class="btn btn-gold btn-sm">Explore Jewelry Catalog</a>
+                </div>
+              </div>
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = items.map(item => `
+          <div class="product-card" id="saved-card-${item.id}">
+            <div class="product-card-header">
+              <div class="product-card-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>${item.category || 'Product'}</span>
+              </div>
+
+              <button class="product-bookmark-btn saved" onclick="removeWishlistItem('${item.id}')" title="Remove from Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="product-card-body">
+              <div class="product-category-tag">${item.category || 'Item'}</div>
+              <h4 class="product-card-title">${item.name}</h4>
+              <p class="product-card-desc">${item.description || ''}</p>
+
+              <div class="product-meta-row">
+                <div class="product-price-block">
+                  <h4>${UI.formatCurrency(item.price || item.pricePerGuest)}</h4>
+                </div>
+                <div class="product-rating-box">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span>${item.rating || '4.8'}</span>
+                </div>
+              </div>
+
+              <div class="product-card-actions">
+                <button class="btn btn-secondary btn-sm" style="flex: 1;" onclick="viewSavedDetails('${item.id}')">
+                  View Specs
+                </button>
+                <button class="btn btn-outline btn-sm" style="color: var(--danger-color); border-color: #fca5a5;" onclick="removeWishlistItem('${item.id}')">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      window.removeWishlistItem = function(id) {
+        StorageService.removeSavedItem(id);
+        UI.showToast('Item removed from wishlist.', 'info');
+        renderSavedItems();
+      };
+
+      window.viewSavedDetails = function(id) {
+        const items = StorageService.getSavedItems();
+        const item = items.find(i => i.id === id);
+        if (!item) return;
+
+        UI.openModal({
+          title: item.name,
+          bodyHtml: `
+            <div>
+              <span class="product-category-tag">${item.category || ''}</span>
+              <p style="margin: 0.75rem 0 1rem; color: var(--text-secondary);">${item.description || ''}</p>
+              <div style="background: var(--surface-subtle); padding: 1rem; border-radius: var(--radius-md);">
+                <div><strong>Price:</strong> ${UI.formatCurrency(item.price || item.pricePerGuest)}</div>
+                ${item.dimensions ? `<div style="margin-top:0.4rem;"><strong>Dimensions:</strong> ${item.dimensions}</div>` : ''}
+                ${item.style ? `<div style="margin-top:0.4rem;"><strong>Style:</strong> ${item.style}</div>` : ''}
+              </div>
+            </div>
+          `,
+          showConfirm: false
+        });
+      };
+
+      // Filter clicks
+      document.querySelectorAll('#savedFilters .filter-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#savedFilters .filter-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          renderSavedItems();
+        });
+      });
+
+      renderSavedItems();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelry Budget Planner – PocketSmart AI</title>
+  <meta name="description" content="Discover fine jewelry, engagement rings, gold chains, and luxury timepieces tailored to your budget and occasion.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner">
+    <span>✨ <strong>Fine Jewelry Engine:</strong> Curates 14K/18K gold, diamonds, platinum, and timepieces with styling guidance.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">LUXE</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link active">Jewelry Planner</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem; max-width: 860px;">
+      
+      <div style="margin-bottom: 2.5rem; text-align: center;">
+        <div class="section-tag gold">Fine Jewelry & Luxury Engine</div>
+        <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem;">Jewelry Budget Planner</h1>
+        <p style="font-size: 1.05rem; max-width: 600px; margin: 0 auto;">
+          Input your budget, preferred precious metal, and occasion to explore curated rings, necklaces, bracelets, and horology timepieces.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <form id="jewelryPlannerForm">
+
+          <!-- Section 1: Budget & Category -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              1. Investment Budget & Item Category
+            </h3>
+            <p class="form-section-subtitle">Set your target budget limit and the category of jewelry you are looking to acquire.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="jwlBudget">Total Target Budget ($) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="jwlBudget" name="budget" placeholder="e.g. 2500" min="50" max="500000" step="50" required />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="jewelryType">Jewelry Category <span class="required">*</span></label>
+                <select class="form-control" id="jewelryType" name="jewelryType">
+                  <option value="All" selected>All Categories (Curated Mix)</option>
+                  <option value="Rings">Rings (Solitaires, Bands, Halos)</option>
+                  <option value="Necklaces">Necklaces (Pendants, Chains, Chokers)</option>
+                  <option value="Bracelets">Bracelets (Tennis, Bangles, Herringbone)</option>
+                  <option value="Earrings">Earrings (Studs, Huggies, Drops)</option>
+                  <option value="Watches">Luxury Watches (Dress Watches, Chronographs)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Occasion & Style -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              2. Occasion & Design Aesthetic
+            </h3>
+            <p class="form-section-subtitle">Specifying the occasion enables contextual styling advice for your attire.</p>
+
+            <div class="grid-2" style="gap: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="occasion">Occasion</label>
+                <select class="form-control" id="occasion" name="occasion">
+                  <option value="Wedding">Wedding / Engagement</option>
+                  <option value="Anniversary" selected>Anniversary / Milestone</option>
+                  <option value="Gift">Personal Gift</option>
+                  <option value="Party">Party / Evening Gala</option>
+                  <option value="Formal">Formal / Black Tie</option>
+                  <option value="Casual">Casual / Everyday Luxury</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="style">Design Style</label>
+                <select class="form-control" id="style" name="style">
+                  <option value="Luxury" selected>Luxury – Bold statement, high diamond pavé, heirloom quality</option>
+                  <option value="Minimalist">Minimalist – Clean lines, subtle floating stones, everyday wear</option>
+                  <option value="Modern">Modern – Geometric forms, chunky silhouettes, fluid links</option>
+                  <option value="Classic">Classic – Timeless prong settings, tennis bracelets, pearls</option>
+                  <option value="Traditional">Traditional – Vintage halos, rich emeralds, intricate engraving</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Precious Metal & Tone -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><circle cx="12" cy="12" r="7"></circle></svg>
+              3. Preferred Metal / Material
+            </h3>
+            <p class="form-section-subtitle">Select your desired metal purity.</p>
+
+            <div class="checkbox-grid">
+              <label class="checkbox-card selected">
+                <input type="radio" name="metal" value="Gold" checked />
+                <span>14K / 18K Yellow Gold</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="radio" name="metal" value="Diamond" />
+                <span>Diamonds & White Gold</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="radio" name="metal" value="Platinum" />
+                <span>Platinum 950</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="radio" name="metal" value="Rose Gold" />
+                <span>Rose Gold</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="radio" name="metal" value="Silver" />
+                <span>Sterling Silver 925</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: #fde68a;">
+            <strong>Note on Recommendations:</strong> All metal specifications, gemstone weights, and prices are demo catalog models. Styling guidance is presented for general aesthetic direction.
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-gold btn-block btn-lg">
+            Curate Luxury Recommendations &rarr;
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI Fine Jewelry Curation Engine.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/planners.js"></script>
+</body>
+</html>

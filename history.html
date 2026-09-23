@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendation History – PocketSmart AI</title>
+  <meta name="description" content="View and manage your saved budget planning sessions across home, party, and jewelry.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <span>💡 <strong>Session History:</strong> All past generated plans are stored in browser localStorage.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar" id="topNav">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span>Pocket<span class="highlight">Smart</span></span>
+        <span class="brand-badge">AI</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="home-planner.html" class="nav-link">Home Planner</a></li>
+          <li><a href="party-planner.html" class="nav-link">Party Planner</a></li>
+          <li><a href="jewelry-planner.html" class="nav-link">Jewelry Planner</a></li>
+          <li><a href="history.html" class="nav-link active">History</a></li>
+          <li><a href="saved.html" class="nav-link">Saved Items</a></li>
+          <li class="mobile-actions"></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions"></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div class="section-tag">Planning Archive</div>
+          <h1 style="font-size: 2.2rem; margin-bottom: 0.35rem;">Recommendation History</h1>
+          <p>Revisit, inspect, or remove past budget planning sessions.</p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-outline btn-sm" id="clearHistoryBtn" style="color: var(--danger-color); border-color: #fca5a5;">
+            Clear All History
+          </button>
+          <a href="dashboard.html" class="btn btn-secondary btn-sm">Return to Dashboard</a>
+        </div>
+      </div>
+
+      <!-- History List -->
+      <div id="historyListContainer" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: #64748b;">PocketSmart AI History Service.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHistory();
+
+      const clearBtn = document.getElementById('clearHistoryBtn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          const list = StorageService.getHistory();
+          if (list.length === 0) {
+            UI.showToast('History is already empty.', 'info');
+            return;
+          }
+
+          UI.openModal({
+            title: 'Clear All History',
+            bodyHtml: '<p>Are you sure you want to delete all saved planning sessions? This cannot be undone.</p>',
+            confirmText: 'Clear All',
+            onConfirm: () => {
+              StorageService.clearAllHistory();
+              UI.showToast('All planning history cleared.', 'success');
+              renderHistory();
+            }
+          });
+        });
+      }
+    });
+
+    function renderHistory() {
+      const container = document.getElementById('historyListContainer');
+      if (!container) return;
+
+      const history = StorageService.getHistory();
+
+      if (history.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <h3>No Saved Plans Yet</h3>
+            <p>You haven't generated any budget plans yet. Select a planner to create your first session.</p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+              <a href="home-planner.html" class="btn btn-primary btn-sm">Home Planner</a>
+              <a href="party-planner.html" class="btn btn-secondary btn-sm">Party Planner</a>
+              <a href="jewelry-planner.html" class="btn btn-gold btn-sm">Jewelry Planner</a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = history.map(plan => {
+        let recUrl = 'home-recommendations.html';
+        let badgeClass = '';
+        if (plan.type?.includes('Party')) {
+          recUrl = 'party-recommendations.html';
+        } else if (plan.type?.includes('Jewelry')) {
+          recUrl = 'jewelry-recommendations.html';
+          badgeClass = 'gold';
+        }
+
+        const dateStr = new Date(plan.createdAt || Date.now()).toLocaleDateString(undefined, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        return `
+          <div style="background: var(--surface-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast);">
+            <div style="flex: 1; min-width: 260px;">
+              <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+                <span class="section-tag ${badgeClass}" style="margin: 0; padding: 0.2rem 0.6rem; font-size: 0.72rem;">${plan.type || 'Custom Plan'}</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text-color);">${dateStr}</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem;">${plan.title || 'Personalized Session'}</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+                Target Budget: <strong style="color: var(--primary-color);">${UI.formatCurrency(plan.budget, plan.currency)}</strong>
+                ${plan.rooms ? ` • Rooms: ${plan.rooms.join(', ')}` : ''}
+                ${plan.guests ? ` • ${plan.guests} Guests` : ''}
+                ${plan.metal ? ` • ${plan.metal}` : ''}
+              </p>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <a href="${recUrl}?planId=${plan.id}" class="btn btn-primary btn-sm">
+                View Recommendations &rarr;
+              </a>
+              <button class="btn btn-outline btn-sm" style="color: var(--danger-color); border-color: #fca5a5;" onclick="deleteSinglePlan('${plan.id}')" title="Delete Plan">
+                Delete
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function deleteSinglePlan(id) {
+      UI.openModal({
+        title: 'Delete Session',
+        bodyHtml: '<p>Are you sure you want to remove this plan from your history?</p>',
+        confirmText: 'Delete',
+        onConfirm: () => {
+          StorageService.deleteHistoryItem(id);
+          UI.showToast('Plan deleted from history.', 'info');
+          renderHistory();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
